@@ -1,0 +1,5 @@
+com\custom\entity\UserAdapter.class
+com\custom\entity\User.class
+com\custom\constant\JpaStorageProviderConstants.class
+com\custom\provider\CustomUserStorageProvider.class
+com\custom\provider\CustomUserStorageProviderFactory.class

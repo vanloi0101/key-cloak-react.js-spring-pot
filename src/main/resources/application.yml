@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: userprovider
+  datasource:
+    url: jdbc:postgresql://localhost:5432/provider_db
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak_container:8180/realms/vanloi
+
+server:
+  port: 8080
+  servlet:
+    context-path: /profile
+
+idp:
+  url: http://keycloak_container:8180
+  client-id: vanloi_app
+  client-secret: g7gw369ta1lFH4lmagK8K55g9lrb9kx8
